@@ -210,5 +210,5 @@ function findword(word){
                     
                     posting.textContent="not found";
                 }
-            $(loader).fadeOut( "slow" );
+            $(loader).css('display', 'none');
 }
