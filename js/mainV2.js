@@ -269,7 +269,7 @@ function findword(word) {
             p.textContent="ไม่พบคำที่กำลังค้นหา กรุณาป้อนคำใหม่";
             p.style.fontSize="32px";
             p.style.color="white";
-             posting.appendchild(p);
+             posting.append(p);
     }
 
 }
