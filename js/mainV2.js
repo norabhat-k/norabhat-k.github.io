@@ -98,6 +98,7 @@ $(document).ready(function () {
     hsearch.textContent = "Search: " + decode;
     $.getJSON("jsonsort.json", function (jdk, index) {
      jd = jdk.object;
+    $(loader).fadeIn( "slow" );
     findword(decode);
     });
     
@@ -121,6 +122,7 @@ var sbtn = document.getElementById("searchButt");
 
 sbtn.onclick = function (e) {
     hsearch.textContent = "Search: " + input.value;
+     $(loader).fadeIn( "slow" );
     findword(input.value);
     e.preventDefault();
 }
@@ -207,5 +209,5 @@ function findword(word){
                     
                     posting.textContent="not found";
                 }
-
+            $(loader).fadeOut( "slow" );
 }
