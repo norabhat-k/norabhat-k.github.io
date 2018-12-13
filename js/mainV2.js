@@ -243,7 +243,7 @@ function findword(word) {
     }
 
     if (numming == 0){
-        
+        posting.innerHTML ="";
          posting.textContent = "not found";
         
     }
