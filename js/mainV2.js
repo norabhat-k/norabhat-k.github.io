@@ -89,6 +89,7 @@ for (j = 0; j < acc.length; j++) {
 var input = document.getElementById("input-text");
 var hsearch = document.getElementById("h-search");
 var jd;
+var loader = document.getElementsByClassName("loader");
 $(document).ready(function () {
     
     var url = window.location.search;
@@ -126,7 +127,7 @@ sbtn.onclick = function (e) {
 }
 
 function findword(word) {
-    
+    $(loader).fadeIn();
     var posting = document.querySelector('#searchResults');
     var numming = 0;
     
@@ -247,5 +248,5 @@ function findword(word) {
          posting.textContent = "not found";
         
     }
-
+$(loader).fadeOut();
 }
