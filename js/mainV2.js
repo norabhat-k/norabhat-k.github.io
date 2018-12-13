@@ -100,7 +100,12 @@ $(document).ready(function () {
     $.getJSON("jsonsort.json", function (jdk, index) {
      jd = jdk.object;
      $(loader).fadeIn();
-    findword(decode);
+        if(input.value==""){
+        alert("กรุณาป้อนคำเพื่อค้นหา");
+        }else{
+        findword(decode);
+        }
+    
     });
     
     
@@ -108,7 +113,13 @@ $(document).ready(function () {
 
 input.addEventListener('keypress', function (e) {
     if (e.which === 13) {
+        $(loader).fadeIn();
         hsearch.textContent = "Search: " + input.value.replace("&search=GO", "");
+        if(input.value==""){
+        alert("กรุณาป้อนคำเพื่อค้นหา");
+        }else{
+        findword(input.value.replace("&search=GO", ""));
+        }
         e.preventDefault();
     }
 });
@@ -124,7 +135,12 @@ var sbtn = document.getElementById("searchButt");
 sbtn.onclick = function (e) {
     $(loader).fadeIn();
     hsearch.textContent = "Search: " + input.value;
-    findword(input.value);
+    if(input.value==""){
+        alert("กรุณาป้อนคำเพื่อค้นหา");
+    }else{
+        findword(input.value);
+    }
+    
     e.preventDefault();
 }
 
