@@ -96,7 +96,7 @@ $(document).ready(function () {
     var search2 = search.replace("&search=GO", "");
     var decode = decodeURIComponent(search2);
     hsearch.textContent = "Search: " + decode;
-    $.getJSON("https://bitbucket.org/Phunon/project-xml/raw/8ee26ee0ef70b048db8f02646082f8093e627b37/API%20part/jsonsort.json", function (jdk, index) {
+    $.getJSON("jsonsort.json", function (jdk, index) {
      jd = jdk.object;
     findword(decode);
     });
