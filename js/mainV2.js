@@ -99,6 +99,7 @@ $(document).ready(function () {
     hsearch.textContent = "Search: " + decode;
     $.getJSON("jsonsort.json", function (jdk, index) {
      jd = jdk.object;
+     $(loader).fadeIn();
     findword(decode);
     });
     
@@ -121,13 +122,13 @@ $(btn).on('click', function (e) {
 var sbtn = document.getElementById("searchButt");
 
 sbtn.onclick = function (e) {
+    $(loader).fadeIn();
     hsearch.textContent = "Search: " + input.value;
     findword(input.value);
     e.preventDefault();
 }
 
 function findword(word) {
-    $(loader).fadeIn();
     var posting = document.querySelector('#searchResults');
     var numming = 0;
     
@@ -216,7 +217,7 @@ function findword(word) {
             cell1.innerHTML = elementTitles[x];
             cell2.appendChild(infos[x]);
             
-            cell1.style = "font-weight: 500; font-size: 24px; pad-right: 8px;";
+            cell1.style = "font-weight: 500; font-size: 24px; padding-right: 8px;";
             cell1.style.textAlign = "right";
             
             cell1.style.backgroundColor = "rgb(128, 64, 32)";
