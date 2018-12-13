@@ -100,7 +100,7 @@ $(document).ready(function () {
     $.getJSON("jsonsort.json", function (jdk, index) {
      jd = jdk.object;
      $(loader).fadeIn();
-        if(input.value==""){
+        if(decode==""){
         alert("กรุณาป้อนคำเพื่อค้นหา");
         }else{
         findword(decode);
@@ -115,7 +115,7 @@ input.addEventListener('keypress', function (e) {
     if (e.which === 13) {
         $(loader).fadeIn();
         hsearch.textContent = "Search: " + input.value.replace("&search=GO", "");
-        if(input.value==""){
+        if(input.value.replace("&search=GO", "")==""){
         alert("กรุณาป้อนคำเพื่อค้นหา");
         }else{
         findword(input.value.replace("&search=GO", ""));
