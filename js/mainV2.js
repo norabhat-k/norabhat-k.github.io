@@ -99,7 +99,6 @@ $(document).ready(function () {
     hsearch.textContent = "Search: " + decode;
      $.getJSON("jsonsort.json", function (jdk, index) {
      jd = jdk.object;
-    $(loader).fadeIn();
         if(decode == ""){
         alert("กรุณาใส่คำเพื่อค้นหาครับ");
         
