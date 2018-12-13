@@ -126,7 +126,9 @@ sbtn.onclick = function (e) {
 }
 
 function findword(word){
-    
+    if(word==""){
+        return;
+    }
         var posting = document.querySelector('#searchResults');
      var numming = 0;
         for (var i = 0; i < jd.length; i++) {
