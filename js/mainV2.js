@@ -228,7 +228,7 @@ function findword(word) {
         posting.appendChild(spaceBetweenTables);
         posting.appendChild(table);
         
-        /*table.style = "width: 100%; border: 1px solid rgb(96, 48, 24);";*/
+        table.style = "width: 100%;";
         
         /*div.appendChild(mes);
         div.appendChild(date);
