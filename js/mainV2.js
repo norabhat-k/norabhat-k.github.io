@@ -89,6 +89,7 @@ for (j = 0; j < acc.length; j++) {
 var input = document.getElementById("input-text");
 var hsearch = document.getElementById("h-search");
 var jd;
+var loader = document.getElementsByClassName("loader");
 $(document).ready(function () {
     
     var url = window.location.search;
@@ -210,5 +211,5 @@ function findword(word){
                     
                     posting.textContent="not found";
                 }
-            $(loader).css('display', 'none');
+         $(loader).fadeOut( "slow" );
 }
