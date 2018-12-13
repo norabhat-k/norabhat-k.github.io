@@ -128,7 +128,6 @@ var sbtn = document.getElementById("searchButt");
 
 sbtn.onclick = function (e) {
     hsearch.textContent = "Search: " + input.value;
-     $(loader).fadeIn();
     if(input.value == ""){
         alert("กรุณาใส่คำเพื่อค้นหาครับ");
         
