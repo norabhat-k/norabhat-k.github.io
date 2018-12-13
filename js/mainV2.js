@@ -263,13 +263,13 @@ function findword(word) {
     }
 
     if (numming == 0){
-        posting.innerHTML = "";
+        
          
          var p = document.createElement('p');
             p.textContent="ไม่พบคำที่กำลังค้นหา กรุณาป้อนคำใหม่";
             p.style.fontSize="32px";
             p.style.color="white";
-             posting.append(p);
+             posting.appendChild(p);
     }
 
 }
