@@ -235,7 +235,7 @@ function findword(word) {
             cell1.innerHTML = elementTitles[x];
             cell2.appendChild(infos[x]);
             
-            cell1.style = "font-weight: 500; font-size: 24px; padding-right: 8px;";
+            cell1.style = "font-weight: 500; font-size: 24px; padding-right: 14px; color: white;";
             cell1.style.textAlign = "right";
             
             cell1.style.backgroundColor = "rgb(128, 64, 32)";
