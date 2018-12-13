@@ -138,8 +138,8 @@ sbtn.onclick = function (e) {
     e.preventDefault();
 }
 function findword(word){
-   
-        var posting = document.querySelector('#searchResults');
+     $(loader).fadeIn();
+     var posting = document.querySelector('#searchResults');
      var numming = 0;
         for (var i = 0; i < jd.length; i++) {
                 
