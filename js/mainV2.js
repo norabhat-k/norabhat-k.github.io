@@ -105,7 +105,7 @@ $(document).ready(function () {
         }else{
         findword(decode);
         }
-    
+    $(loader).fadeOut();
     });
     
     
@@ -120,6 +120,7 @@ input.addEventListener('keypress', function (e) {
         }else{
         findword(input.value.replace("&search=GO", ""));
         }
+        $(loader).fadeOut();
         e.preventDefault();
     }
 });
@@ -140,6 +141,7 @@ sbtn.onclick = function (e) {
     }else{
         findword(input.value);
     }
+    $(loader).fadeOut();
     
     e.preventDefault();
 }
@@ -261,9 +263,13 @@ function findword(word) {
     }
 
     if (numming == 0){
-        posting.innerHTML ="";
-         posting.textContent = "not found";
-        
+        posting.innerHTML = "";
+         
+         var p = document.createElement('p');
+            p.textContent="ไม่พบคำที่กำลังค้นหา กรุณาป้อนคำใหม่";
+            p.style.fontSize="32px";
+            p.style.color="white";
+             posting.appendchild(p);
     }
-$(loader).fadeOut();
+
 }
