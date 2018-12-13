@@ -27,7 +27,7 @@
                             <a href = "index.html#faq">Top FAQs</a>&emsp;
                             <a href = "pantipTagsMockup.html">Tags</a>&emsp;
                             <a href = "about%20v0.3.html">About</a>&emsp;
-                            <a href = "https://bitbucket.org/Phunon/project-xml/raw/8ee26ee0ef70b048db8f02646082f8093e627b37/API%20part/jsonsort.json?fbclid=IwAR07KM8ZF_mV1QohJY_SyOEHjT3atYN9qe-YeatKaX59_jlZQailagfEMBI">API</a>
+                            <a href = "">API</a>
                         </h1>
                     </div>
 
@@ -35,33 +35,36 @@
             </tr>
         </table>
         
-        <section style = "width: 100%;">
+        <section style = "width: 100%; margin-left: 16px;">
 
             <form action = "search v2.html" method = "GET">
 
                 <h1 style = "text-align: left;
-                    margin-left: 16px;
+                    
                     font-size: 4vh;
                     color: lightcyan;
                     " id = "h-search">Search result for: </h1>
 
             </form>
-
-            <input id = "input-text" 
-                           class = "searchBox" 
-                           type = "text" 
-                           name = "search" 
-                           placeholder = "Search here!"><br>
-                    <input id = "searchButt" 
-                           class = "searchButton" 
-                           type = "submit" 
-                           name = "search" 
-                           value = "GO">
-
             
+            <section class = "inputs">
+                <input id = "input-text" 
+                    class = "searchBox" 
+                    type = "text" 
+                    name = "search" 
+                    placeholder = "Search here!"><br>
+                <input id = "searchButt" 
+                    class = "searchButton" 
+                    type = "submit" 
+                    name = "search" 
+                    value = "GO">
+            </section>
+            
+
         </section>
         
         <section class = "searchResults" id = "searchResults">
+            
         </section>
 
     </body>
@@ -126,6 +129,55 @@
         
         a:active { 
             color: white !important;
+        }
+        
+        section.inputs {
+            
+            display: flex;
+            
+        }
+        
+        input.searchBox {
+            
+            width: 60%;
+            height: 40px;
+            
+            background-color: transparent;
+            
+            border-top-style: none;
+            border-right-style: none;
+            border-bottom-style: 1px solid white;
+            border-left-style: none;
+            
+            font-family: "Roboto";
+            font-size: 28px;
+            
+            color: white;
+            
+        }
+        
+        input.searchButton {
+            
+            width: 48px;
+            font-family: "Roboto";
+            font-weight: 700;
+            
+            margin-left: 16px;
+            
+            border: none;
+            
+        }
+        
+        section.searchResults {
+            
+            margin: 0;
+            padding: 0;
+            
+            margin-left: 16px;
+            margin-right: 16px;
+            
+            padding: 0;
+            
         }
 
     </style>
