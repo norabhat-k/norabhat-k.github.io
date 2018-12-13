@@ -129,6 +129,7 @@ sbtn.onclick = function (e) {
 
 function findword(word){
     if(word==""){
+        alert("กรุณาใส่คำเพื่อค้นหาครับ");
         return;
     }
         var posting = document.querySelector('#searchResults');
