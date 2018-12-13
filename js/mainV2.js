@@ -97,10 +97,16 @@ $(document).ready(function () {
     var search2 = search.replace("&search=GO", "");
     var decode = decodeURIComponent(search2);
     hsearch.textContent = "Search: " + decode;
-    $.getJSON("jsonsort.json", function (jdk, index) {
+     $.getJSON("jsonsort.json", function (jdk, index) {
      jd = jdk.object;
     $(loader).fadeIn( "slow" );
-    findword(decode);
+        if(decode == ""){
+        alert("กรุณาใส่คำเพื่อค้นหาครับ");
+        
+    }else{
+       findword(decode);
+    }
+    
     });
     
     
@@ -124,15 +130,17 @@ var sbtn = document.getElementById("searchButt");
 sbtn.onclick = function (e) {
     hsearch.textContent = "Search: " + input.value;
      $(loader).fadeIn( "slow" );
-    findword(input.value);
+    if(input.value == ""){
+        alert("กรุณาใส่คำเพื่อค้นหาครับ");
+        
+    }else{
+       findword(input.value);
+    }
+    
     e.preventDefault();
 }
-
 function findword(word){
-    if(word==""){
-        alert("กรุณาใส่คำเพื่อค้นหาครับ");
-        return;
-    }
+   
         var posting = document.querySelector('#searchResults');
      var numming = 0;
         for (var i = 0; i < jd.length; i++) {
