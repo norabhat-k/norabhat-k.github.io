@@ -99,7 +99,7 @@ $(document).ready(function () {
     hsearch.textContent = "Search: " + decode;
      $.getJSON("jsonsort.json", function (jdk, index) {
      jd = jdk.object;
-    $(loader).fadeIn( "slow" );
+    $(loader).fadeIn();
         if(decode == ""){
         alert("กรุณาใส่คำเพื่อค้นหาครับ");
         
@@ -129,7 +129,7 @@ var sbtn = document.getElementById("searchButt");
 
 sbtn.onclick = function (e) {
     hsearch.textContent = "Search: " + input.value;
-     $(loader).fadeIn( "slow" );
+     $(loader).fadeIn();
     if(input.value == ""){
         alert("กรุณาใส่คำเพื่อค้นหาครับ");
         
@@ -219,5 +219,5 @@ function findword(word){
                     
                     posting.textContent="not found";
                 }
-         $(loader).fadeOut( "slow" );
+         $(loader).fadeOut();
 }
