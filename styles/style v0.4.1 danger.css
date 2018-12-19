@@ -333,6 +333,17 @@ input.searchButton {
     font-family: "Roboto Medium";
 }
     
+td.willMigrateToSomewhere {
+    
+    color: yellow;
+    font-family: Roboto;
+    text-align: center;
+    font-size: 20px;
+    
+    padding: 0;
+    margin: 0;
+    
+    
 }
 
 
